@@ -1,6 +1,10 @@
 import Form from "../components/Form";
 import prisma from "../db";
 
+interface guestbook {
+	message: string;
+	id: string;
+}
 async function getEntries() {
 	const data = await prisma.guestbook.findMany({
 		take: 50,
@@ -26,7 +30,7 @@ export default async function Guestbook() {
 				<div className="max-w-[500px] mx-auto mt-8">
 					<Form />
 					<div className="flex flex-col space-y-4">
-						{data.map((entry) => (
+						{data.map((entry: guestbook) => (
 							<div key={entry.id} className="w-full text-sm break-words">
 								<p>{entry.message}</p>
 							</div>
