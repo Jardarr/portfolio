@@ -20,7 +20,7 @@ export default function Home() {
 						Dmitry Pligin
 					</h3>
 					<p className="text-gray-500 dark:text-gray-300 text-center">
-						Hey my name is Jan and i am a frontend developer
+						Hey my name is Dmitry and i am a frontend developer
 					</p>
 					<div className="flex pt-6 space-x-5">
 						<a href="https://github.com/Jardarr" target="_blank">
